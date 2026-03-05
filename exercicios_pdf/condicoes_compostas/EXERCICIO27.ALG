@@ -3,7 +3,7 @@ var
    nomeal: caractere
    nota1, nota2, media: real
 inicio
-      escreval("CONFERIÇÃO DE STATUS DE APROVAÇÃO DO ALUNO")
+      escreval("CONFERIÃ‡ÃƒO DE STATUS DE APROVAÃ‡ÃƒO DO ALUNO")
       escreval(" ")
       escreval("Nome do aluno: ")
       leia(nomeal)
@@ -17,14 +17,14 @@ inicio
       escreval("NOME: ", nomeal)
       
       se (media >= 7) entao
-         escreval("MÉDIA: ", media)
+         escreval("MÃ‰DIA: ", media)
          escreval("STATUS: APROVADO")
       senao
            se (media >= 5) e (media <= 6.9) entao
-              escreval("MÉDIA: ", media)
-              escreval("STATUS: EM RECUPERAÇÃO")
+              escreval("MÃ‰DIA: ", media)
+              escreval("STATUS: EM RECUPERAÃ‡ÃƒO")
            senao
-                escreval("MÉDIA: ", media)
+                escreval("MÃ‰DIA: ", media)
                 escreval("STATUS: REPROVADO")
            fimse
       fimse
