@@ -2,21 +2,21 @@ algoritmo "exercicio26"
 var
    N1, N2: real
 inicio
-      escreval("COMPARAR NÃšMEROS")
+      escreval("COMPARAR NÚMEROS")
       escreval(" ")
-      escreval("Digite o primeiro nÃºmero: ")
+      escreval("Digite o primeiro número: ")
       leia(N1)
-      escreval("Digite o segundo nÃºmero: ")
+      escreval("Digite o segundo número: ")
       leia(N2)
       
       se (N1 > N2) entao
-         escreval(N1, " Ã© maior que ", N2)
+         escreval(N1, " é maior que ", N2)
       senao
            se (N1 < N2) entao
-              escreval(N1, " Ã© menor que ", N2)
+              escreval(N1, " é menor que ", N2)
            senao
                 se (N1 = N2) entao
-                   escreval("Os nÃºmeros inseridos sÃ£o iguais.")
+                   escreval("Os números inseridos são iguais.")
                 fimse
            fimse
       fimse

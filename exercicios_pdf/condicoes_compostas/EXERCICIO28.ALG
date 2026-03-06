@@ -4,7 +4,7 @@ var
    L1, L2, area: real
 
 inicio
-      escreval("CLASSIFICA√á√ÉO DE TERRENO")
+      escreval("CLASSIFICA«√O DE TERRENO")
       escreval(" ")
       escreval("Insira a largura do terreno em metros: ")
       leia(L1)
@@ -14,15 +14,15 @@ inicio
       area <- L1 * L2
       
       se (area < 100) entao
-         escreval("√ÅREA DO TERRENO: ", area, "m¬≤")
-         escreval("CLASSIFICA√á√ÉO: TERRENO POPULAR")
+         escreval("¡REA DO TERRENO: ", area, "m≤")
+         escreval("CLASSIFICA«√O: TERRENO POPULAR")
       senao
            se (area >= 100) e (area <= 500) entao
-              escreval("√ÅREA DO TERRENO: ", area, "m¬≤")
-              escreval("CLASSIFICA√á√ÉO: TERRENO MASTER")
+              escreval("¡REA DO TERRENO: ", area, "m≤")
+              escreval("CLASSIFICA«√O: TERRENO MASTER")
            senao
-                escreval("√ÅREA DO TERRENO: ", area, "m¬≤")
-                escreval("CLASSIFICA√á√ÉO: TERRENO VIP")
+                escreval("¡REA DO TERRENO: ", area, "m≤")
+                escreval("CLASSIFICA«√O: TERRENO VIP")
            fimse
       fimse
 fimalgoritmo

@@ -6,28 +6,28 @@ var
 inicio
       escreval("REAJUSTE SALARIAL")
       escreval(" ")
-      escreval("Nome do funcion√°rio: ")
+      escreval("Nome do funcion·rio: ")
       leia(nomef)
-      escreval("Sal√°rio atual: ")
+      escreval("Sal·rio atual: ")
       leia(sal)
       escreval("Anos de empresa: ")
       leia(anos)
       escreval(" ")
       escreval("NOME: ", nomef)
-      escreval("SAL√ÅRIO: R$", sal)
+      escreval("SAL¡RIO: R$", sal)
       escreval("ANOS DE EMPRESA: ", anos)
       escreval(" ")
       
       se (anos < 3) entao
          nsal <- (sal*3/100) + sal
-         escreval("O sal√°rio reajustado ser√° de R$", nsal)
+         escreval("O sal·rio reajustado ser· de R$", nsal)
       senao
            se (anos >= 3) e (anos <= 10) entao
               nsal <- (sal*12.5/100) + sal
-              escreval("O sal√°rio reajustado ser√° de R$", nsal)
+              escreval("O sal·rio reajustado ser· de R$", nsal)
            senao
                 nsal <- (sal*20/100) + sal
-                escreval("O sal√°rio reajustado ser√° de R$", nsal)
+                escreval("O sal·rio reajustado ser· de R$", nsal)
            fimse
       fimse
          
