@@ -12,22 +12,14 @@ var
                 inicio
 
                       eHp <- randI(200) + 90
-                      eSpd <- randI(5) + 1
-                      eAtk <- rand(19) + 4
+                      eSpd <- randI(10) + 1
+                      eAtk <- randI(26) + 4
 
                       pHp <- randI(150) + 75
-                      pSpd <- randI(5) + 1
-                      pAtk <- rand(18) + 6
+                      pSpd <- randI(10) + 1
+                      pAtk <- randI(30) + 6
                       faQnty <- randI(3) + 1
                       playerStartHp <- pHp
-                      
-                      se (eAtk < 8) entao
-                         eAtk <- 8
-                      fimse
-
-                      se (pAtk < 10) entao
-                         pAtk <- 10
-                      fimse
                       
                       randomName <- RandI(4) + 1
                       
@@ -92,13 +84,13 @@ var
                    rndEnemy, rndPlayer, critEnemy, critPlayer, critDmg: inteiro
                 inicio
                 
-                      rndPlayer <- randI(5) + 1
-                      rndEnemy <- randI(5) + 1
+                      rndPlayer <- randI(10) + 1
+                      rndEnemy <- randI(10) + 1
                       critEnemy <- randI(15) + 1
                       critPlayer <- randI(12) + 1
                       
                       
-                      se (rndPlayer < playerSpd) entao
+                      se (rndPlayer <= playerSpd) entao
                          se (critPlayer = 12) entao
                             escreval("VOCÊ ATACOU O INIMIGO! DANO CRÍTICO!!")
                             enemyHp <- enemyHp - (playerAtk * 2)
@@ -112,7 +104,7 @@ var
                            escreval("VOCÊ ERROU SEU ATAQUE!")
                       fimse
                       
-                      se (rndEnemy < enemySpd) entao
+                      se (rndEnemy <= enemySpd) entao
                          se (critEnemy = 15) entao
                             escreval("O INIMIGO TE ATACOU! ATAQUE CRÍTICO!!")
                             playerHp <- playerHp - (enemyAtk * 2)
@@ -126,9 +118,18 @@ var
                            escreval("O INIMIGO ERROU O ATAQUE!")
                       fimse
                       
-                      se (enemyHp <= 0) ou (playerHp <= 0) entao
+                      se (enemyHp <= 0) entao
+                         escreval(eName, " FOI DERROTADO(A)!")
+                         enterKey()
                          limpatela
                          resultsScreen()
+                      senao
+                           se (playerHp <= 0) entao
+                              escreval("VOCÊ FOI DERROTADO!")
+                              enterKey()
+                              limpatela
+                              resultsScreen()
+                           fimse
                       fimse
                       
                       escreval(" ")
@@ -196,6 +197,7 @@ var
                          se (itemID = 1) entao
                             playerHp <- playerStartHp
                             escreval("A FRUTA ALADA RECUPEROU TODA SUA VIDA!")
+                            faQnty <- faQnty - 1
                             enterKey()
                             limpatela
                             battleScreen()
