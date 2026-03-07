@@ -16,11 +16,7 @@ inicio
       se (conf1 = "S") ou (conf1 = "s") entao
          repita
 
-               rnd <- randI(5)
-
-               se (rnd = 0) entao
-                  rnd <- rnd + 1
-               fimse
+               rnd <- randI(5) + 1
 
                escreval("Qual é a resposta certa?")
                escreval("R: ")
@@ -43,3 +39,4 @@ inicio
 
 
 fimalgoritmo
+
