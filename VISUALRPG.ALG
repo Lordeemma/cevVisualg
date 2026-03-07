@@ -62,19 +62,19 @@ var
                       limpatela
                       escreval("-------------------------------")
                       se (eName = "GOBLIN") entao
-                         escreval("SER DE BAIXA ESTATURA, PELE VERDE, ORELHAS PONTUDAS E OLHOS AMARELOS. USA ARMADURA IMPROVISADA E EMPUNHA UMA ADAGA CURVA. √â √ÅGIL, SORRATEIRO E ADORA ROUBAR TESOUROS.")
+                         escreval("SER DE BAIXA ESTATURA, PELE VERDE, ORELHAS PONTUDAS E OLHOS AMARELOS. USA ARMADURA IMPROVISADA E EMPUNHA UMA ADAGA CURVA. … ¡GIL, SORRATEIRO E ADORA ROUBAR TESOUROS.")
                       senao
                            se (eName = "ORC") entao
                               escreval("MONSTRO ROBUSTO, DE PELE VERDE-ESCURA E PRESAS SALIENTES. USA ARMADURA PESADA E CARREGA UM GRANDE MACHADO. FORTE E AGRESSIVO, VIVE PARA LUTAR.")
                            senao
                                 se (eName = "GUERREIRO") entao
-                                   escreval("GUERREIRO HUMANO DE ARMADURA DE A√áO E ESPADA LONGA. TREINADO PARA COMBATE F√çSICO, ENFRENTA INIMIGOS COM CORAGEM E DISCIPLINA.")
+                                   escreval("GUERREIRO HUMANO DE ARMADURA DE A«O E ESPADA LONGA. TREINADO PARA COMBATE FÕSICO, ENFRENTA INIMIGOS COM CORAGEM E DISCIPLINA.")
                                 senao
                                      se (eName = "KANNE") entao
-                                        escreval("SER CELESTE, H√çBRIDO DE PEIXE-DIABO, COM BELEZA INIGUAL√ÅVEL E TRA√áOS HARMONIOSOS. SEU CHARME √â T√ÉO INTENSO QUE COSTUMA DEIXAR TODOS AO SEU REDOR AT√îNITOS.")
+                                        escreval("SER CELESTE, HÕBRIDO DE PEIXE-DIABO, COM BELEZA INIGUAL¡VEL E TRA«OS HARMONIOSOS. SEU CHARME … T√O INTENSO QUE COSTUMA DEIXAR TODOS AO SEU REDOR AT‘NITOS.")
                                      senao
                                           se (eName = "QUIMERA") entao
-                                             escreval("CRIATURA H√çBRIDA DE ORIGEM DESCONHECIDA. RUMORES DIZEM QUE SURGIU DE EXPERIMENTOS CIENT√çFICOS FALHOS.")
+                                             escreval("CRIATURA HÕBRIDA DE ORIGEM DESCONHECIDA. RUMORES DIZEM QUE SURGIU DE EXPERIMENTOS CIENTÕFICOS FALHOS.")
                                           fimse
                                      fimse
                                 fimse
@@ -100,27 +100,27 @@ var
                       
                       se (rndPlayer < playerSpd) entao
                          se (critPlayer = 12) entao
-                            escreval("VOC√ä ATACOU O INIMIGO! DANO CR√çTICO!!")
+                            escreval("VOC  ATACOU O INIMIGO! DANO CRÕTICO!!")
                             enemyHp <- enemyHp - (playerAtk * 2)
-                            escreval("SEU DANO FOI DE ", (playerAtk * 2), ". AGORA, A VIDA DO INIMIGO √â DE ", enemyHp, "HP.")
+                            escreval("SEU DANO FOI DE ", (playerAtk * 2), ". AGORA, A VIDA DO INIMIGO … DE ", enemyHp, "HP.")
                          senao
-                              escreval("VOC√ä ATACOU O INIMIGO!")
+                              escreval("VOC  ATACOU O INIMIGO!")
                               enemyHp <- enemyHp - playerAtk
-                              escreval("SEU DANO FOI DE ", playerAtk, ". AGORA, A VIDA DO INIMIGO √â DE ", enemyHp, "HP.")
+                              escreval("SEU DANO FOI DE ", playerAtk, ". AGORA, A VIDA DO INIMIGO … DE ", enemyHp, "HP.")
                          fimse
                       senao
-                           escreval("VOC√ä ERROU SEU ATAQUE!")
+                           escreval("VOC  ERROU SEU ATAQUE!")
                       fimse
                       
                       se (rndEnemy < enemySpd) entao
                          se (critEnemy = 15) entao
-                            escreval("O INIMIGO TE ATACOU! ATAQUE CR√çTICO!!")
+                            escreval("O INIMIGO TE ATACOU! ATAQUE CRÕTICO!!")
                             playerHp <- playerHp - (enemyAtk * 2)
-                            escreval("O DANO DO INIMIGO FOI DE ", (enemyAtk * 2), ". AGORA, SUA VIDA √â DE ", playerHp, "HP.")
+                            escreval("O DANO DO INIMIGO FOI DE ", (enemyAtk * 2), ". AGORA, SUA VIDA … DE ", playerHp, "HP.")
                          senao
                               escreval("O INIMIGO TE ATACOU!")
                               playerHp <- playerHp - enemyAtk
-                              escreval("O DANO DO INIMIGO FOI DE ", enemyAtk, ". AGORA, SUA VIDA √â DE ", playerHp, "HP.")
+                              escreval("O DANO DO INIMIGO FOI DE ", enemyAtk, ". AGORA, SUA VIDA … DE ", playerHp, "HP.")
                          fimse
                       senao
                            escreval("O INIMIGO ERROU O ATAQUE!")
@@ -147,7 +147,7 @@ var
                       se (enemyHp <= 0) entao
                          escreval("<====<===<===o===>===>====>")
                          escreval(" ")
-                         escreval("  ! ! ! ! VIT√ìRIA ! ! ! !  ")
+                         escreval("  ! ! ! ! VIT”RIA ! ! ! !  ")
                          escreval(" ")
                          escreval("<====<===<===o===>===>====>")
                          escreval(" ")
@@ -157,7 +157,7 @@ var
                       fimse
                       
                       se (playerHp <= 0) entao
-                         escreval("VOC√ä PERDEU...")
+                         escreval("VOC  PERDEU...")
                          enterKey()
                          limpatela
                          startMenu()
@@ -203,7 +203,7 @@ var
                               itemMenu()
                          fimse
                       senao
-                           escreval("VOC√ä N√ÉO POSSUI ITENS!")
+                           escreval("VOC  N√O POSSUI ITENS!")
                            enterKey()
                            limpatela
                            battleScreen()
@@ -247,7 +247,7 @@ var
                                    fimalgoritmo
                               outrocaso
                                        limpatela
-                                       startMenu()
+                                       fimalgoritmo
                               fimescolha
 
    fimprocedimento
@@ -256,7 +256,7 @@ var
    procedimento battleScreen()
 
                 var
-                   chooseMenu, x: inteiro
+                   chooseMenu: inteiro
                 inicio
                 
                       escreval(eName, " APARECEU!")
@@ -274,7 +274,7 @@ var
                       escreval("O QUE DESEJA FAZER? ")
                       
                       se (eName = "KANNE") entao
-                         escreval("[1] ABRA√áAR")
+                         escreval("[1] ABRA«AR")
                       senao
                            escreval("[1] ATACAR")
                       fimse
@@ -284,38 +284,28 @@ var
                       escreval("[4] FUGIR")
                       escreval("--------------------")
                       leia(chooseMenu)
-                      
-                      se (chooseMenu = 1) entao
-                         battleSequence()
-                      senao
-                           se (chooseMenu = 2) entao
-                              itemMenu()
-                           senao
-                                se (chooseMenu = 3) entao
-                                   enemyDesc()
-                                senao
-                                     se (chooseMenu = 4) entao
-                                        escreval("VOC√ä FUGIU!")
-                                        escreval("PRESSIONE ENTER PARA CONTINUAR")
-                                        leia(x)
-                                        limpatela
-                                        startMenu()
-                                     senao
-                                          se (chooseMenu <= 0) ou (chooseMenu > 4) entao
-                                             limpatela
-                                             battleScreen()
-                                          fimse
-                                     fimse
-                                fimse
-                           fimse
-                      fimse
 
+                      escolha chooseMenu
+                              caso 1
+                                   battleSequence()
+                              caso 2
+                                   itemMenu()
+                              caso 3
+                                   enemyDesc()
+                              caso 4
+                                   escreval("VOC  FUGIU!")
+                                   enterKey()
+                                   limpatela
+                                   startMenu()
+                              outrocaso
+                                       limpatela
+                                       battleScreen()
+                      fimescolha
                 
    fimprocedimento
 
 inicio
 
       startMenu()
-
 
 fimalgoritmo
