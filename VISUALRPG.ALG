@@ -202,7 +202,8 @@ var
                             limpatela
                             battleScreen()
                          senao
-                              itemMenu()
+                              limpatela
+                              battleScreen()
                          fimse
                       senao
                            escreval("VOCÊ NÃO POSSUI ITENS!")
