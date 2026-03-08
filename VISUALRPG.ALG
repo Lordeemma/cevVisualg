@@ -251,7 +251,7 @@ var
                               outrocaso
                                        limpatela
                                        fimalgoritmo
-                              fimescolha
+                      fimescolha
 
    fimprocedimento
 

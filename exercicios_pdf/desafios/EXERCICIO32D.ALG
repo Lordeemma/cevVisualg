@@ -5,10 +5,10 @@ var
 inicio
 
       escreval("------------------")
-      escreval(" SHOW DO MANDRI√ÉO ")
+      escreval(" SHOW DO MANDRI√O ")
       escreval("------------------")
       escreval(" ")
-      escreval("Um n√∫mero de 1 a 5 ser√° sorteado e voc√™ ter√° que adivinh√°-lo. Vamos l√°?")
+      escreval("Um n˙mero de 1 a 5 ser· sorteado e vocÍ ter· que adivinh·-lo. Vamos l·?")
       escreval("[S/N] ")
       leia(conf1)
       escreval(" ")
@@ -16,9 +16,9 @@ inicio
       se (conf1 = "S") ou (conf1 = "s") entao
          repita
 
-               rnd <- randI(5) + 1
+               rnd <- randI(5)
 
-               escreval("Qual √© a resposta certa?")
+               escreval("Qual È a resposta certa?")
                escreval("R: ")
                leia(resp)
                escreval(" ")
@@ -26,7 +26,7 @@ inicio
                se (resp = rnd) entao
                   escreval("Certa resposta! ")
                senao
-                    escreval("Que pena... voc√™ errou! ")
+                    escreval("Que pena... vocÍ errou! ")
                fimse
                
                escreval("Deseja continuar?")
@@ -37,6 +37,4 @@ inicio
            fimalgoritmo
       fimse
 
-
 fimalgoritmo
-
